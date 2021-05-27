@@ -1,0 +1,18 @@
+#toast-container>div{
+    animation: colorChange;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorChange{
+    0%{
+        background-color: green;
+    }
+    50%{
+        background-color: red;
+    }
+    100%{
+        background-color: green;
+    }
+}

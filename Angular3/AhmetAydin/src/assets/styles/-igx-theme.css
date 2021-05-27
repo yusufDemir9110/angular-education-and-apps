@@ -1,0 +1,8 @@
+.igxButton{
+    color:green !important;
+    background-color: wheat !important;
+}
+
+.igxButton:hover{
+    background-color: yellow !important;
+}

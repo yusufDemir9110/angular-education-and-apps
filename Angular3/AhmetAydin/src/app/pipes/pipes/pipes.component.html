@@ -1,0 +1,49 @@
+<div class="row">
+    <h3>lowercase</h3>
+    <div class="col-md-2">
+        
+        <p>normal: {{title}}</p>
+        <p>lowercase : {{title|lowercase}}</p>
+        <p>titlecace: {{title|titlecase}}</p>
+        <p>uppercase : {{title|uppercase}}</p>
+        <p>turkish uppercase : {{turkishUppercaseVal|uppercase}}</p>
+    </div>
+    <div class="col-md-4">
+        <p>pipe date: {{today |date:"dd/MMMM/yyyy"}}</p>
+        <p>pipe date: {{today |date:"medium"}}</p>
+        <p>pipe date: {{today |date:"fullDate":"":"tr-TR"}}</p>
+        <p>pipe date: {{today |date:"longDate":"":"tr-TR"}}</p>
+    </div>
+    <div class="col-md-4">
+        <p>normal value: {{cashVal}}</p>
+        <p>currency value: {{cashVal|currency:"EUR"}}</p>
+        <p>currency value: {{cashVal|currency:"TRY":"symbol":"1.2-2":"tr-TR"}}</p>
+    </div>
+    <div class="col-md-3">
+        <p>without pipe</p>
+        <p>{{objectVal}}</p>
+
+        <p>with pipe</p>
+        <p>{{objectVal|json}}</p>
+    </div>
+    <div class="col-md-3">
+        <p>{{percentVal|percent}}</p>
+        <p>{{percentVal|percent:"":"tr-TR"}}</p>
+    </div>
+    <div class="col-md-3">
+        <p>normal: {{cityName}}</p>
+        <p>slice pipe :{{cityName|slice:0:3}}</p>
+        <p>slice pipe :{{cityName|slice:-2}}</p>
+        <p>slice and uppercase pipe :{{cityName|uppercase|slice:0:3}}</p>
+    </div>
+    <div class="col-md-3">
+        <h6>custom pipe</h6>
+        <p>{{cash|tl}}</p>
+
+        <br>
+
+        <ul>
+            <li *ngFor="let city of cities|myFiltering:'i'">{{city}}</li>
+        </ul>
+    </div>
+</div>
